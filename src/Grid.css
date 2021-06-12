@@ -43,7 +43,7 @@ table {
   --baseMonoFontSize: 14;
 
   --sansFont: "Inter";
-  --monoFont: "SF Mono, Roboto Mono Var, Roboto Mono,JetBrains Mono";
+  --monoFont: "SF Mono", "Roboto Mono Var", "Roboto Mono", "JetBrains Mono", monospace;
 
   --sansFontSize: calc(var(--baseSansFontSize) * 1rem / 16);
   --monoFontSize: calc(var(--baseMonoFontSize) * 1rem / var(--baseSansFontSize));
@@ -123,7 +123,7 @@ table {
 @supports (font-variation-settings: normal){
   :root{
     --sansFont: "Inter var";
-    --monoFont: "JetBrains Mono var";
+    --monoFont: "SF Mono", "Roboto Mono Var","JetBrains Mono", monospace;
   }
 }
 
