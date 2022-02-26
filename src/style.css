@@ -1,5 +1,10 @@
-@import "./Grid.css";
+@import "grilles/grille.css";
+@import url('https://rsms.me/inter/inter.css');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
 
+:root{
+  --sansFont: "Inter", "Inter var", "SF Pro Text", "Noto Sans", "Segoe UI", Roboto, "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
 
 #darkMode-toggle,
 #min-search {
@@ -16,6 +21,7 @@
   margin-top: 1.35rem;
   align-self: flex-start;
 }
+
 a {
   outline: none;
 }
@@ -238,6 +244,7 @@ a {
 .table .icn {
   font-size: 1.4rem;
   font-weight: 400;
+  font-family: var(--sansFont);
   justify-self: center;
   user-select: none;
 }

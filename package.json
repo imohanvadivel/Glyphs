@@ -1,15 +1,17 @@
 {
   "name": "glyphs",
-  "version": "1.0.0",
-  "main": "index.js",
+  "description": "Copy typographic spaces, math notations, punctuations, dingbats, and other miscellaneous symbols & signs",
   "repository": "https://github.com/imohanvadivel/glyphs.git",
   "author": "Mohan Vadivel <mohanvadivel@hotmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "esbuild src/script.js src/style.css --bundle --sourcemap --watch --outdir=./dist --external:*.woff --external:*.woff2 --external:*.ttf --external:*.otf",
-    "build": "esbuild src/script.js src/style.css --bundle --minify --outdir=./dist --external:*.woff --external:*.woff2 --external:*.ttf --external:*.otf"
+    "dev": "esbuild src/script.js src/style.css --bundle --watch --outdir=./dist",
+    "build": "esbuild src/script.js src/style.css --bundle --minify --outdir=./dist"
   },
   "devDependencies": {
     "esbuild": "^0.12.8"
+  },
+  "dependencies": {
+    "grilles": "^1.0.5"
   }
 }

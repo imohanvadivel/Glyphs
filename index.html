@@ -5,7 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#fff" />
-    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml" />
+    <meta
+      name="description"
+      content="Copy typographic spaces, math notations,
+    punctuations, dingbats, and other miscellaneous symbols & signs to your clipboard"
+    />
+    <link
+      rel="shortcut icon"
+      href="./dist/assets/logo/icon.svg"
+      type="image/png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="./dist/assets/logo/maskable_icon_x192.png"
+      type="image/png"
+    />
+    <link rel="manifest" href="./dist/manifest.json" />
 
     <title>GLYPHS</title>
     <link rel="stylesheet" href="./dist/style.css" />
@@ -49,7 +64,7 @@
         </svg>
       </div>
       <div class="flex-h center icons">
-        <a id="min-search" class="flex center" href="javascript:void(0)">
+        <a id="min-search" class="flex center plain" href="javascript:void(0)">
           <svg
             width="20"
             height="20"
@@ -65,7 +80,7 @@
         </a>
         <a
           id="darkMode-toggle"
-          class="flex center"
+          class="flex center plain"
           tabindex="2"
           href="javascript:void(0)"
         >
@@ -114,7 +129,12 @@
             />
           </svg>
         </a>
-        <a class="github flex center" tabindex="3" href="javascript:void(0)">
+        <a
+          class="github flex center plain"
+          tabindex="3"
+          href="https://github.com/imohanvadivel/Glyphs"
+          target="_blank"
+        >
           <svg
             width="24"
             height="24"
@@ -136,8 +156,8 @@
         <p>
           Glyphs is a one-stop place for typographic spaces, math notations,
           punctuations, dingbats, and other miscellaneous symbols. <br />
-          [click] to copy a glyph,<br />
-          [shift + click] to copy their Unicode.
+          <b>[click]</b> to copy a glyph,<br />
+          <b>[shift + click]</b> to copy their Unicode.
         </p>
         <p>
           <b>Note:</b> Not all typefaces are packed with all the glyphs, and
@@ -146,11 +166,7 @@
         </p>
       </div>
       <div span="4-4" class="flex-v text-right opt">
-        <a
-          href="javascript:void(0)"
-          tabindex="4"
-          id="sh-uni"
-          class="single-line"
+        <a tabindex="4" target="_blank" id="sh-uni" class="single-line"
           >Show Unicode (u)</a
         >
         <a
@@ -166,6 +182,23 @@
     <div class="toast">
       <div class="msg"></div>
     </div>
+    <div class="debug-grid grid" columns="4">
+      <div style="min-width: 99px">&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+    </div>
   </body>
   <script src="./dist/script.js"></script>
+  <script>
+    if (navigator.serviceWorker) {
+      navigator.serviceWorker.register("./sw.js");
+    }
+  </script>
+
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/grilles@1.0.5/grille.debug.css"
+  />
+  <script src="https://unpkg.com/grilles@1.0.5/debug.js"></script>
 </html>

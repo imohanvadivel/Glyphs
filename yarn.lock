@@ -6,3 +6,8 @@ esbuild@^0.12.8:
   version "0.12.8"
   resolved "https://registry.yarnpkg.com/esbuild/-/esbuild-0.12.8.tgz#ac90da77cb3bfbf49ab815200bcef7ffe1a3348f"
   integrity sha512-sx/LwlP/SWTGsd9G4RlOPrXnIihAJ2xwBUmzoqe2nWwbXORMQWtAGNJNYLBJJqa3e9PWvVzxdrtyFZJcr7D87g==
+
+grilles@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/grilles/-/grilles-1.0.5.tgz#18b96207c35657db958abeebf70e7610ef3edf79"
+  integrity sha512-7egQpkmXmyKsAVAQ4ciy1nAcS8uPFgDWKo/p84R+h1iWqzoFXt6zrtothOVrvnZTZjEA44mU5lxhVsv1tl4Vtw==

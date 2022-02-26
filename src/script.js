@@ -300,7 +300,7 @@ class DarkMode {
 
 new DarkMode($("#darkMode-toggle"), "glyphs", true);
 
-//Keyevent listener
+//Debugging
 window.addEventListener("keydown", (e) => {
   if (!document.activeElement.closest(".search-bar")) {
     if (e.keyCode === 85) toggleUnicode();
@@ -318,3 +318,17 @@ window.addEventListener("keydown", (e) => {
     $(".search-bar input").focus();
   }
 });
+
+if (window.BroadcastChannel) {
+  let channel = new BroadcastChannel("glyph-refresh");
+  channel.onmessage = function (e) {
+    if ((e.data = "refresh")) {
+      let initial = localStorage.getItem("glyphs-initial");
+      if (!initial) {
+        localStorage.setItem("glyphs-initial", "true");
+      } else {
+        toastMessage("Refresh the page for new updates to take effect", 5000);
+      }
+    }
+  };
+}
